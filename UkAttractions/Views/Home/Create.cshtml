@@ -1,0 +1,111 @@
+﻿@model UKAttractions.Models.CountryAttraction
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<div class="container">
+    <div class="well">
+        <h1 class="database-header animated fadeIn">Add New Attraction</h1>
+
+        @using (Html.BeginForm())
+        {
+            <div class="form-horizontal">
+                <div class="vertical-rhythm">
+                    <h4 class="animated fadeIn">Please enter the following details of new attraction you would like to add.</h4>
+                </div>
+                <hr />
+
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                <div class="form-group animated fadeInUp">
+                    <label class="control-label col-md-4">Name</label>
+                    <div class="col-md-5">
+                        @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control", placeholder = "Enter a place name" } })
+                        @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group animated fadeInUp">
+                    <label class="control-label col-md-4">City</label>
+                    <div class="col-md-5">
+                        @Html.EditorFor(model => model.City, new { htmlAttributes = new { @class = "form-control", placeholder = "Enter a city" } })
+                        @Html.ValidationMessageFor(model => model.City, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group animated fadeInUp">
+                    <label class="control-label col-md-4">Post Code</label>
+                    <div class="col-md-5">
+                        @Html.EditorFor(model => model.Post_Code, new { htmlAttributes = new { @class = "form-control", placeholder = "Enter a post code" } })
+                        @Html.ValidationMessageFor(model => model.Post_Code, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group animated fadeInUp">
+                    <label class="control-label col-md-4">Image URL</label>
+                    <div class="col-md-5">
+                        @Html.EditorFor(model => model.Image, new { htmlAttributes = new { @class = "form-control", placeholder = "https://pixabay.com/the-shard.png" } })
+                        @Html.ValidationMessageFor(model => model.Image, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group animated fadeInUp">
+                    <label class="control-label col-md-4">Description</label>
+                    <div class="col-md-5">
+                        @Html.EditorFor(model => model.Description1, new { htmlAttributes = new { @class = "form-control", placeholder = "The design of the building changed 16 times during plann..." } })
+                        @Html.ValidationMessageFor(model => model.Description1, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group animated fadeInUp">
+                    <label class="control-label col-md-4">More Description</label>
+                    <div class="col-md-5">
+                        @Html.EditorFor(model => model.Description2, new { htmlAttributes = new { @class = "form-control", placeholder = "The design of the building changed 16 times during plann" } })
+                        @Html.ValidationMessageFor(model => model.Description2, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group animated fadeInUp">
+                    <label class="control-label col-md-4">Website Link</label>
+                    <div class="col-md-5">
+                        @Html.EditorFor(model => model.LinktoAttrctn, new { htmlAttributes = new { @class = "form-control", placeholder = "www.londoneye.com" } })
+                        @Html.ValidationMessageFor(model => model.LinktoAttrctn, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group animated fadeInUp">
+                    <label class="control-label col-md-4">Ticket(Adult) (£)</label>
+                    <div class="col-md-5">
+                        @Html.EditorFor(model => model.Cost, new { htmlAttributes = new { @class = "form-control", placeholder = "14" } })
+                        @Html.ValidationMessageFor(model => model.Cost, null, new { @class = "text-danger" })
+                    </div>
+                </div>
+                <h3 class="text-center animated fadeInUp map">For Map Show</h3>
+                <div class="form-group animated fadeInUp">
+                    <label class="control-label col-md-4">Latitude</label>
+                    <div class="col-md-5">
+                        @Html.EditorFor(model => model.Latitude, new { htmlAttributes = new { @class = "form-control", placeholder = "51.30007" } })
+                       @* @Html.ValidationMessageFor(model => model.Latitude, null, new { @class = "text-danger" })*@
+                    </div>
+                </div>
+                <div class="form-group animated fadeInUp">
+                    <label class="control-label col-md-4">Longitude</label>
+                    <div class="col-md-5">
+                        @Html.EditorFor(model => model.Longitude, new { htmlAttributes = new { @class = "form-control", placeholder = "-1.430008" } })
+                       @* @Html.ValidationMessageFor(model => model.Longitude, null, new { @class = "text-danger" })*@
+                    </div>
+                </div>
+
+                <div class="vertical-rhythm">
+                    <div class="form-group">
+                        <div class="col-md-offset-4 col-md-1">
+                            @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-info pull-right" })
+                           
+                        </div>
+                        <div class="col-md-2">
+                            <input type="submit" value="Create" class="btn btn-info" />
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <br />
+            </div>
+        }
+
+    </div>
+</div>
+
