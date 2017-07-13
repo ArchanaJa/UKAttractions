@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TopAttractionsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CountryAttractions">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="City" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Image" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Description1" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Description2" Type="nvarchar(max)" />
+    <Property Name="LinktoAttrctn" Type="nvarchar(max)" />
+    <Property Name="Cost" Type="float" />
+    <Property Name="Latitude" Type="float" />
+    <Property Name="Longitude" Type="float" />
+    <Property Name="Post_Code" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityContainer Name="TopAttractionsModelStoreContainer">
+    <EntitySet Name="CountryAttractions" EntityType="Self.CountryAttractions" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

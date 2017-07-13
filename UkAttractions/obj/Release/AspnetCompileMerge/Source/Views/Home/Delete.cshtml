@@ -1,0 +1,91 @@
+﻿@model UKAttractions.Models.CountryAttraction
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<div class="my-container">
+    <div class="container">
+        <div class="well">
+            <h2 class="database-header animated fadeIn">Remove</h2>
+            <div class="vertical-rhythm">
+                <h4 class="animated fadeIn">@Html.DisplayFor(model => model.Name)</h4>
+            </div>
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Name)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Name)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Image)
+                </dt>
+                <dd>
+                    <img src=@Html.DisplayFor(model => model.Image) width="482" height="321">
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.City)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.City)
+                </dd>
+                <dt>
+                    Description
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Description1)
+                </dd>
+                <dt>
+                    Additional Description
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Description2)
+                </dd>
+                <dt>
+                    Cost (£)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Cost)
+                </dd>
+                <dt>
+                    Website Link
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.LinktoAttrctn)
+                </dd>
+                <dt>
+                    Latitude
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Latitude)
+                </dd>
+                <dt>
+                    Longitude
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Longitude)
+                </dd>
+
+            </dl>
+            <div class="vertical-rhythm">
+                <div class="form-group">
+
+                    <div class="col-md-2">
+                        @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-default pull-right" })
+                    </div>
+                    <div class="col-md-2">
+                        @using (Html.BeginForm())
+                        {
+                            <input type="submit" value="Delete" class="btn btn-default" />
+                        }
+                    </div>
+                </div>
+            </div>
+            <br />
+            <br />
+        </div>
+    </div>
+</div>
+
+

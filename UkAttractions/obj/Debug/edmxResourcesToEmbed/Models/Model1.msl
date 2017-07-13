@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TopAttractionsModelStoreContainer" CdmEntityContainer="TopAttractionsEntities">
+    <EntitySetMapping Name="CountryAttractions">
+      <EntityTypeMapping TypeName="TopAttractionsModel.CountryAttraction">
+        <MappingFragment StoreEntitySet="CountryAttractions">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description1" ColumnName="Description1" />
+          <ScalarProperty Name="Description2" ColumnName="Description2" />
+          <ScalarProperty Name="LinktoAttrctn" ColumnName="LinktoAttrctn" />
+          <ScalarProperty Name="Cost" ColumnName="Cost" />
+          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+          <ScalarProperty Name="Post_Code" ColumnName="Post_Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
